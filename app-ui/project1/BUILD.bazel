@@ -1,0 +1,8 @@
+genrule(
+    name = "build_project_2",
+    srcs = [
+        "//app-ui/project2:content",
+    ],
+    outs = ["dist"],
+    cmd = "cd app-ui/project2; npm run build ../../$(location dist)",
+)
